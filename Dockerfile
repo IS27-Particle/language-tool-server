@@ -20,4 +20,4 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
 
 EXPOSE 8081
 
-ENTRYPOINT [ "java", "-cp", "/LanguageTool-6.3/languagetool-server.jar", "org.languagetool.server.HTTPServer", "--languageModel", "/LanguageTool-6.3/en", "--port", "8081", "--allow-origin", "\"*\"" ]
+ENTRYPOINT [ "java", "-cp", "/LanguageTool-6.3/languagetool-server.jar", "org.languagetool.server.HTTPServer", "--languageModel", "/LanguageTool-6.3/en", "--public", "--port", "8081", "--allow-origin", "\"*\"" ]
